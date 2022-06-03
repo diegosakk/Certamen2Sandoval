@@ -5,10 +5,67 @@
     android:layout_height="match_parent"
     tools:context=".RegistrarCientifico">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="40dp"
+            android:text="Registrar un Cientifico"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/txtRutCientifico"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="RUT" />
+
+        <EditText
+            android:id="@+id/txtNombreCientifico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Nombre" />
+
+        <EditText
+            android:id="@+id/txtApellidoCientifico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
+
+        <RadioGroup
+            android:layout_width="300dp"
+            android:layout_height="47dp"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="75dp"
+            tools:layout_editor_absoluteY="51dp">
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="RadioButton" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="RadioButton" />
+        </RadioGroup>
+        <Button
+            android:id="@+id/btnRegistrarCientifico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrar" />
+
+    </LinearLayout>
 
 </FrameLayout>
