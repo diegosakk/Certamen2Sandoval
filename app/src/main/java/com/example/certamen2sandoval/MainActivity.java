@@ -14,11 +14,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void ActivityCientifico(View view){
-        Intent intent = new Intent(MainActivity.this, Cientifico.class);
+        Intent intent = new Intent(MainActivity.this, MenuCientifico.class);
         startActivity(intent);
     }
     public void ActivityPlantas (View view){
-        Intent intent = new Intent(MainActivity.this, Plantas.class);
+        Intent intent = new Intent(MainActivity.this, MenuPlantas.class);
         startActivity(intent);
     }
 

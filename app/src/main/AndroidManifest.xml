@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Certamen2Sandoval">
         <activity
+            android:name=".RegistrarCientificos"
+            android:exported="false" />
+        <activity
+            android:name=".MenuCientifico"
+            android:exported="false" />
+        <activity
+            android:name=".MenuPlantas"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrarPlantas"
+            android:exported="false" />
+        <activity
+            android:name=".Plantas"
+            android:exported="false" />
+        <activity
             android:name=".Cientifico"
             android:exported="false" />
         <activity
