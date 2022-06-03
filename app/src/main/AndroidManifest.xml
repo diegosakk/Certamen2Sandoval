@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Certamen2Sandoval">
         <activity
+            android:name=".RegistrarRecoleccion"
+            android:exported="false" />
+        <activity
+            android:name=".MenuRecoleccion"
+            android:exported="false" />
+        <activity
             android:name=".RegistrarCientificos"
             android:exported="false" />
         <activity
