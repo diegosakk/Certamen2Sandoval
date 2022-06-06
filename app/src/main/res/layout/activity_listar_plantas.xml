@@ -4,16 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuPlantas">
+    tools:context=".ListarPlantas">
 
-    <Button
-        android:id="@+id/btnRegistrar"
-        android:layout_width="142dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="124dp"
-        android:onClick="ActivityRegistrarPlantas"
-        android:text="Registrar Plantas"
+    <ListView
+        android:id="@+id/listPlantas"
+        android:layout_width="409dp"
+        android:layout_height="584dp"
+        android:layout_marginTop="156dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

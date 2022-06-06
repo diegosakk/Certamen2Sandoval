@@ -17,14 +17,14 @@
         tools:layout_editor_absoluteX="0dp" />
 
     <EditText
-        android:id="@+id/txtCodigoPlanta"
+        android:id="@+id/txtRUT"
         android:layout_width="375dp"
         android:layout_height="62dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="140dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="RUT"
+        android:hint="RUT"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,18 +35,18 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Nombre"
-        app:layout_constraintStart_toStartOf="@+id/txtCodigoPlanta"
-        app:layout_constraintTop_toBottomOf="@+id/txtCodigoPlanta" />
+        android:hint="Nombre"
+        app:layout_constraintStart_toStartOf="@+id/txtRUT"
+        app:layout_constraintTop_toBottomOf="@+id/txtRUT" />
 
     <EditText
-        android:id="@+id/txtApellido"
+        android:id="@+id/txtApellidos"
         android:layout_width="375dp"
         android:layout_height="62dp"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Apellido"
+        android:hint="Apellido"
         app:layout_constraintStart_toStartOf="@+id/txtNombre"
         app:layout_constraintTop_toBottomOf="@+id/txtNombre" />
 
@@ -57,11 +57,11 @@
         android:orientation="horizontal"
         tools:layout_editor_absoluteX="75dp"
         tools:layout_editor_absoluteY="51dp"
-        app:layout_constraintStart_toStartOf="@+id/txtApellido"
-        app:layout_constraintTop_toBottomOf="@+id/txtApellido">
+        app:layout_constraintStart_toStartOf="@+id/txtApellidos"
+        app:layout_constraintTop_toBottomOf="@+id/txtApellidos">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/rdMasculino"
             android:layout_width="185dp"
             android:layout_height="wrap_content"
 
@@ -79,8 +79,9 @@
         android:layout_width="375dp"
         android:layout_height="62dp"
         android:layout_marginTop="68dp"
+        android:onClick="RegistrarCientificoBoton"
         android:text="Registrar"
-        app:layout_constraintStart_toStartOf="@+id/txtApellido"
-        app:layout_constraintTop_toBottomOf="@+id/txtApellido" />
+        app:layout_constraintStart_toStartOf="@+id/txtApellidos"
+        app:layout_constraintTop_toBottomOf="@+id/txtApellidos" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

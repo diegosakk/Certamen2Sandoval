@@ -17,4 +17,8 @@ public class MenuCientifico extends AppCompatActivity {
         Intent intent = new Intent(MenuCientifico.this, RegistrarCientificos.class);
         startActivity(intent);
     }
+    public void ActivityListarCientificos(View view){
+        Intent intent = new Intent(MenuCientifico.this, ListarCientificos.class);
+        startActivity(intent);
+    }
 }

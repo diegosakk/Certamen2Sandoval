@@ -6,15 +6,66 @@
     android:layout_height="match_parent"
     tools:context=".RegistrarRecoleccion">
 
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:entries="@array/MenuCientifico"
-        android:minHeight="48dp"
+    <EditText
+        android:id="@+id/txtCodigoPlanta"
+        android:layout_width="375dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="112dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Codigo Planta"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtComentario"
+        android:layout_width="375dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Comentario"
+        app:layout_constraintStart_toStartOf="@+id/spinCientifico"
+        app:layout_constraintTop_toBottomOf="@+id/spinCientifico" />
+
+    <Spinner
+        android:id="@+id/spinIDPlanta"
+        android:layout_width="375dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/MenuCientifico"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/Fecha"
+        app:layout_constraintTop_toBottomOf="@+id/Fecha" />
+
+    <Spinner
+        android:id="@+id/spinCientifico"
+        android:layout_width="375dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="8dp"
+        android:entries="@array/MenuCientifico"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="@+id/Fecha"
+        app:layout_constraintTop_toBottomOf="@+id/spinIDPlanta" />
+
+    <EditText
+        android:id="@+id/Fecha"
+        android:layout_width="375dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="@+id/txtCodigoPlanta"
+        app:layout_constraintTop_toBottomOf="@+id/txtCodigoPlanta" />
+
+    <Button
+        android:id="@+id/btnRegistrarRecoleccion"
+        android:layout_width="375dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="68dp"
+        android:text="Registrar"
+        app:layout_constraintStart_toStartOf="@+id/txtComentario"
+        app:layout_constraintTop_toBottomOf="@+id/txtComentario" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

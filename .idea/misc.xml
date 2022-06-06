@@ -7,6 +7,9 @@
         <entry key="..\:/Users/dbenj/AndroidStudioProjects/Certamen2Sandoval/app/src/main/res/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/Users/dbenj/AndroidStudioProjects/Certamen2Sandoval/app/src/main/res/layout/fragment_registrar_cientifico.xml" value="0.21557971014492755" />
         <entry key="..\:/Users/dbenj/StudioProjects/Certamen2Sandoval/app/src/main/res/layout/activity_cientifico.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/dbenj/StudioProjects/Certamen2Sandoval/app/src/main/res/layout/activity_listar_cientificos.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/dbenj/StudioProjects/Certamen2Sandoval/app/src/main/res/layout/activity_listar_plantas.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/dbenj/StudioProjects/Certamen2Sandoval/app/src/main/res/layout/activity_listar_recoleccion.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/dbenj/StudioProjects/Certamen2Sandoval/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
         <entry key="..\:/Users/dbenj/StudioProjects/Certamen2Sandoval/app/src/main/res/layout/activity_menu_cientifico.xml" value="0.358695652173913" />
         <entry key="..\:/Users/dbenj/StudioProjects/Certamen2Sandoval/app/src/main/res/layout/activity_menu_plantas.xml" value="0.358695652173913" />
@@ -15,8 +18,10 @@
         <entry key="..\:/Users/dbenj/StudioProjects/Certamen2Sandoval/app/src/main/res/layout/activity_registrar_cientificos.xml" value="0.358695652173913" />
         <entry key="..\:/Users/dbenj/StudioProjects/Certamen2Sandoval/app/src/main/res/layout/activity_registrar_plantas.xml" value="0.358695652173913" />
         <entry key="..\:/Users/dbenj/StudioProjects/Certamen2Sandoval/app/src/main/res/layout/activity_registrar_recoleccion.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/dbenj/StudioProjects/Certamen2Sandoval/app/src/main/res/layout/cientificolist.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/dbenj/StudioProjects/Certamen2Sandoval/app/src/main/res/layout/fragment_registrar_cientifico.xml" value="0.358695652173913" />
         <entry key="..\:/Users/dbenj/StudioProjects/Certamen2Sandoval/app/src/main/res/layout/fragment_registrar_planta.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/dbenj/StudioProjects/Certamen2Sandoval/app/src/main/res/menu/menu.xml" value="0.34444444444444444" />
       </map>
     </option>
   </component>

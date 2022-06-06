@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Certamen2Sandoval">
         <activity
+            android:name=".ListarRecoleccion"
+            android:exported="false" />
+        <activity
+            android:name=".ListarPlantas"
+            android:exported="false" />
+        <activity
+            android:name=".ListarCientificos"
+            android:exported="false" />
+        <activity
             android:name=".RegistrarRecoleccion"
             android:exported="false" />
         <activity
@@ -26,12 +35,6 @@
             android:exported="false" />
         <activity
             android:name=".RegistrarPlantas"
-            android:exported="false" />
-        <activity
-            android:name=".Plantas"
-            android:exported="false" />
-        <activity
-            android:name=".Cientifico"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
