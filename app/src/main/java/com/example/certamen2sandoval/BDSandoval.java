@@ -26,10 +26,10 @@ public class BDSandoval extends SQLiteOpenHelper {
                 "(id INTEGER PRIMARY KEY AUTOINCREMENT, rut TEXT unique,nombre TEXT , apellido TEXT, genero TEXT)");
 
         db.execSQL("CREATE TABLE PLANTASANDOVAL" +
-                "(id INTEGER PRIMARY KEY AUTOINCREMENT, codigoPlanta TEXT, nombrePlanta TEXT, nombreCientifico TEXT, imagenPlanta BLOB, uso TEXT )");
+                "(id INTEGER PRIMARY KEY AUTOINCREMENT, CodigoPlanta TEXT, NombrePlanta TEXT, NombreCientifico TEXT, ImagenPlanta BLOB, Uso TEXT )");
 
         db.execSQL("CREATE TABLE RECOLECCIONSANDOVAL" +
-                "(id INTEGER PRIMARY KEY AUTOINCREMENT, fecha TEXT, codigoPlanta TEXT, rutCientifico TEXT, comentario TEXT, imagenLugar BLOB,latitud REAL,longitud REAL )");
+                "(id INTEGER PRIMARY KEY AUTOINCREMENT, fecha TEXT, CodigoPlanta TEXT, RUTCientifico TEXT, comentario TEXT, imagenLugar BLOB,latitud REAL,longitud REAL )");
     }
 
 
@@ -86,6 +86,56 @@ public class BDSandoval extends SQLiteOpenHelper {
             onCreate(db);
         }
         return insertar;
+    }
+
+    public String RegistrarPlanta(ClasePlanta planta) {
+        String insertar = "exito";
+        SQLiteDatabase db = getWritableDatabase();
+        if (db != null) {
+            ContentValues valores = new ContentValues();
+            valores.put("CodigoPlanta", planta.getCodigoPlanta()+"");
+            valores.put("NombrePlanta", planta.getNombrePlanta());
+            valores.put("NombreCientifico", planta.getNombreCientifico());
+            //valores.put("ImagenPlanta", planta.getImagenPlanta());
+            valores.put("Uso", planta.getUso());
+
+            try {
+                db.insert("PLANTASANDOVAL", "", valores);
+                db.close();
+            } catch (Exception e) {
+                db.close();
+                insertar = "error";
+            }
+        } else {
+            onCreate(db);
+        }
+        return insertar;
+    }
+    public ArrayList<ClasePlanta> ListarPlantas(){
+        SQLiteDatabase db = getWritableDatabase();
+        ArrayList<ClasePlanta> plantas = new ArrayList<ClasePlanta>();
+        ClasePlanta planta = new ClasePlanta();
+        try {
+            Cursor c = db.rawQuery("SELECT * FROM PLANTASANDOVAL", null);
+
+            if (c.getCount() > 0) {
+                while (c.moveToNext()){
+                    //planta = new ClasePlanta(c.getInt(0), c.getInt(1), c.getString(2), c.getString(3), c.getBlob(4), c.getString(5));
+                    plantas.add(planta);
+                }
+                this.close();
+                c.close();
+
+                return plantas;
+            } else {
+                this.close();
+                c.close();
+
+                return null;
+            }
+        } catch (Exception e) {
+            return null;
+        }
     }
 }
 
