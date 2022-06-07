@@ -96,7 +96,7 @@ public class BDSandoval extends SQLiteOpenHelper {
             valores.put("CodigoPlanta", planta.getCodigoPlanta()+"");
             valores.put("NombrePlanta", planta.getNombrePlanta());
             valores.put("NombreCientifico", planta.getNombreCientifico());
-            //valores.put("ImagenPlanta", planta.getImagenPlanta());
+            valores.put("ImagenPlanta", planta.getImagenPlanta());
             valores.put("Uso", planta.getUso());
 
             try {
@@ -120,7 +120,7 @@ public class BDSandoval extends SQLiteOpenHelper {
 
             if (c.getCount() > 0) {
                 while (c.moveToNext()){
-                    //planta = new ClasePlanta(c.getInt(0), c.getInt(1), c.getString(2), c.getString(3), c.getBlob(4), c.getString(5));
+                    planta = new ClasePlanta(c.getInt(0), c.getInt(1), c.getString(2), c.getString(3), c.getBlob(4), c.getString(5));
                     plantas.add(planta);
                 }
                 this.close();
