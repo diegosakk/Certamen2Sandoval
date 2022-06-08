@@ -16,4 +16,14 @@
         android:text="Registrar Plantas"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnListarPlantas"
+        android:layout_width="142dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="52dp"
+        android:onClick="ActivityRegistrarPlantas"
+        android:text="Listar Plantas"
+        app:layout_constraintStart_toStartOf="@+id/btnRegistrar"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrar" />
 </androidx.constraintlayout.widget.ConstraintLayout>
