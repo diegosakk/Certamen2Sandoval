@@ -65,13 +65,13 @@
             android:layout_width="185dp"
             android:layout_height="wrap_content"
 
-            android:text="RadioButton" />
+            android:text="Masculino" />
 
         <RadioButton
             android:id="@+id/rdFemenino"
             android:layout_width="190dp"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:text="Femenino" />
     </RadioGroup>
 
     <Button

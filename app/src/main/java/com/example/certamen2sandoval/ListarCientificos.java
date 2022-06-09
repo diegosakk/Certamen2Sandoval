@@ -20,6 +20,7 @@ public class ListarCientificos extends AppCompatActivity {
         lvListarCientifico = findViewById(R.id.listCientificos);
         ListarCientifico();
     }
+
     BDSandoval objBD;
 
     public void  ListarCientifico() {
@@ -29,8 +30,8 @@ public class ListarCientificos extends AppCompatActivity {
         ArrayList<ClaseCientifico> ListarCientificos = objBD.ListarCientificos();
 
 
-            ArrayListview adapter = new ArrayListview(this, 0, ListarCientificos);
-            lvListarCientifico.setAdapter(adapter);
+        ArrayListview adapter = new ArrayListview(this, 0, ListarCientificos);
+        lvListarCientifico.setAdapter(adapter);
 
     }
 }

@@ -17,4 +17,8 @@ public class MenuPlantas extends AppCompatActivity {
         Intent intent = new Intent(MenuPlantas.this, RegistrarPlantas.class);
         startActivity(intent);
     }
+    public void ActivityListarPlantas(View view){
+        Intent intent = new Intent(MenuPlantas.this, ListarPlantas.class);
+        startActivity(intent);
+    }
 }
