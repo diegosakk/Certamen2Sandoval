@@ -1,9 +1,12 @@
 package com.example.certamen2sandoval;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -26,12 +29,15 @@ public class ArrayListviewPlanta extends ArrayAdapter <ClasePlanta> {
         TextView nombrePlanta = (TextView) ListaPlanta.findViewById(R.id.lblNombrePlanta);
         TextView nombreCientifico = (TextView) ListaPlanta.findViewById(R.id.lblNombreCientifico);
         TextView uso = (TextView) ListaPlanta.findViewById(R.id.lblUso);
+        ImageView imagenPlanta = (ImageView) ListaPlanta.findViewById(R.id.imagenPlanta);
 
         ClasePlanta planta = getItem(position);
         id.setText(planta.getIdPlanta() + "");
         nombrePlanta.setText(planta.getNombrePlanta() + "");
         nombreCientifico.setText(planta.getNombreCientifico() + "");
         uso.setText(planta.getUso());
+        Bitmap image = BitmapFactory.decodeByteArray(planta.getImagenPlanta(), 0, planta.getImagenPlanta().length);
+        imagenPlanta.setImageBitmap(image);
         return ListaPlanta;
     }
 }

@@ -118,11 +118,12 @@ public class BDSandoval extends SQLiteOpenHelper {
         try {
             Cursor c = db.rawQuery("SELECT * FROM PLANTASANDOVAL", null);
 
-            if (c.getCount() > 0) {
-                while (c.moveToNext()){
+            if (c.moveToFirst()) {
+                do {
                     planta = new ClasePlanta(c.getInt(0), c.getInt(1), c.getString(2), c.getString(3), c.getBlob(4), c.getString(5));
                     plantas.add(planta);
                 }
+                while (c.moveToNext());
                 this.close();
                 c.close();
 

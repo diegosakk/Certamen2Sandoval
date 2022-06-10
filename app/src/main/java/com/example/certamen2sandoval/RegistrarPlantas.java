@@ -55,7 +55,7 @@ public class RegistrarPlantas extends AppCompatActivity {
         }
     }
 
-    public void RegistrarPlanta (View v){
+    public void RegistrarPlantaBoton (View v){
         ByteArrayOutputStream stream= new ByteArrayOutputStream();
         bmp1.compress(Bitmap.CompressFormat.PNG, 100, stream);
         byte [] byteArray = stream.toByteArray();

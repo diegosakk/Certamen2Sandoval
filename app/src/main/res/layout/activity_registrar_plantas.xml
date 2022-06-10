@@ -66,6 +66,7 @@
         android:layout_width="375dp"
         android:layout_height="62dp"
         android:layout_marginTop="164dp"
+        android:onClick="RegistrarPlantaBoton"
         android:text="Registrar"
         app:layout_constraintStart_toStartOf="@+id/txtUso"
         app:layout_constraintTop_toBottomOf="@+id/txtUso" />
