@@ -7,25 +7,26 @@
     android:onClick="ActivityCientifico"
     tools:context=".MainActivity">
 
+
     <Button
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="192dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="184dp"
         android:onClick="ActivityRecoleccion"
-        android:text="Button"
-        app:layout_constraintStart_toStartOf="@+id/button2"
+        android:text="Recolecciones"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="148dp"
         android:onClick="ActivityCientifico"
-        android:text="Button"
+        android:text="Cientificos"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,9 +34,10 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="64dp"
         android:onClick="ActivityPlantas"
-        android:text="Button"
+        android:text="Plantas"
         app:layout_constraintStart_toStartOf="@+id/button2"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 

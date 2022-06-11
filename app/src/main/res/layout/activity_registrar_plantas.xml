@@ -75,10 +75,10 @@
         android:id="@+id/btnCamara"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="188dp"
+        android:layout_marginStart="200dp"
         android:layout_marginTop="56dp"
         android:onClick="TomarFoto"
-        android:text="FOTAZA MANO"
+        android:text="Tomar Foto"
         app:layout_constraintStart_toStartOf="@+id/txtUso"
         app:layout_constraintTop_toBottomOf="@+id/txtUso" />
 

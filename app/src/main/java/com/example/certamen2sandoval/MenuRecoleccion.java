@@ -17,4 +17,8 @@ public class MenuRecoleccion extends AppCompatActivity {
         Intent intent = new Intent(MenuRecoleccion.this, RegistrarRecoleccion.class);
         startActivity(intent);
     }
+    public void ActivityListarRecoleccion(View view){
+        Intent intent = new Intent(MenuRecoleccion.this, ListarRecoleccion.class);
+        startActivity(intent);
+    }
 }

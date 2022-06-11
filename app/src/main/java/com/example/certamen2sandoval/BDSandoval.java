@@ -138,5 +138,57 @@ public class BDSandoval extends SQLiteOpenHelper {
             return null;
         }
     }
+
+    public String RegistrarRecoleccion(ClaseRecoleccion recoleccion) {
+        String insertar = "exito";
+        SQLiteDatabase db = getWritableDatabase();
+        if (db != null) {
+            ContentValues valores = new ContentValues();
+            valores.put("fecha", recoleccion.getFecha());
+            valores.put("CodigoPlanta", recoleccion.getCodigoPlanta()+"");
+            valores.put("RUTCientifico", recoleccion.getRUTCientifico());
+            valores.put("comentario", recoleccion.getComentario());
+            valores.put("imagenLugar", recoleccion.getFotoLugar());
+            valores.put("latitud", recoleccion.getLatitud());
+            valores.put("longitud", recoleccion.getLongitud());
+            try {
+                db.insert("PLANTASANDOVAL", "", valores);
+                db.close();
+            } catch (Exception e) {
+                db.close();
+                insertar = "error";
+            }
+        } else {
+            onCreate(db);
+        }
+        return insertar;
+    }
+    public ArrayList<ClaseRecoleccion> ListarRecoleccion(){
+        SQLiteDatabase db = getWritableDatabase();
+        ArrayList<ClaseRecoleccion> recolecciones = new ArrayList<ClaseRecoleccion>();
+        ClaseRecoleccion recoleccion = new ClaseRecoleccion();
+        try {
+            Cursor c = db.rawQuery("SELECT * FROM RECOLECCIONSANDOVAL", null);
+
+            if (c.moveToFirst()) {
+                do {
+                    recoleccion = new ClaseRecoleccion(c.getString(0), c.getInt(1), c.getInt(2), c.getString(3), c.getBlob(4), c.getInt(5),c.getInt(6));
+                    recolecciones.add(recoleccion);
+                }
+                while (c.moveToNext());
+                this.close();
+                c.close();
+
+                return recolecciones;
+            } else {
+                this.close();
+                c.close();
+
+                return null;
+            }
+        } catch (Exception e) {
+            return null;
+        }
+    }
 }
 
