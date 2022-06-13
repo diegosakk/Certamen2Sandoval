@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 
 import java.util.List;
+//Diego Sandoval 20619.149-K
 public class ArrayListviewRecoleccion extends ArrayAdapter<ClaseRecoleccion> {
     View ListaRecoleccion;
 
@@ -30,17 +31,13 @@ public class ArrayListviewRecoleccion extends ArrayAdapter<ClaseRecoleccion> {
         TextView RUTCientifico = (TextView) ListaRecoleccion.findViewById(R.id.lblRUTCientifico);
         TextView Comentario = (TextView) ListaRecoleccion.findViewById(R.id.lblComentario);
         ImageView imagenRecoleccion = (ImageView) ListaRecoleccion.findViewById(R.id.imagenRecoleccion);
-        TextView latitud = (TextView) ListaRecoleccion.findViewById(R.id.lblLatitud);
-        TextView longitud = (TextView) ListaRecoleccion.findViewById(R.id.lblLongitud);
 
         ClaseRecoleccion recoleccion = getItem(position);
         fecha.setText(recoleccion.getFecha() + "");
         CodigoPlanta.setText(recoleccion.getCodigoPlanta() + "");
-        RUTCientifico.setText(recoleccion.getRUTCientifico());
+        RUTCientifico.setText(recoleccion.getRUTCientifico()+"");
         Comentario.setText(recoleccion.getComentario());
         Bitmap image = BitmapFactory.decodeByteArray(recoleccion.getFotoLugar(), 0, recoleccion.getFotoLugar().length);
-        latitud.setText(recoleccion.getLatitud());
-        longitud.setText(recoleccion.getLongitud());
         imagenRecoleccion.setImageBitmap(image);
         return ListaRecoleccion;
     }

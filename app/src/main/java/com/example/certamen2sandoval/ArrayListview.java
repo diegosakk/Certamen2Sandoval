@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 
 import java.util.List;
+//Diego Sandoval 20619.149-K
 public class ArrayListview extends ArrayAdapter <ClaseCientifico> {
     View ListaCientifico;
 

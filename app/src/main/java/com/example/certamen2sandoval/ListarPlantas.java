@@ -1,5 +1,5 @@
 package com.example.certamen2sandoval;
-
+//Diego Sandoval 20619.149-K
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -17,7 +17,9 @@ public class ListarPlantas extends AppCompatActivity {
         setContentView(R.layout.activity_listar_plantas);
         lvListarPlanta = findViewById(R.id.listPlantas);
         ListarPlantas();
+
     }
+
 
     BDSandoval objBD;
 

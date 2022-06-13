@@ -1,5 +1,5 @@
 package com.example.certamen2sandoval;
-
+//Diego Sandoval 20619.149-K
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -103,9 +103,10 @@ public class RegistrarRecoleccion extends AppCompatActivity {
         latitud = 0;
         longitud=0;
 
-        BDSandoval db = new BDSandoval(this);
 
         ClaseRecoleccion recoleccion = new ClaseRecoleccion(txtFecha.getText().toString(),codigoPlanta,RUTCientifico,txtComentario.getText().toString(),byteArray,latitud,longitud);
+        BDSandoval db = new BDSandoval(this);
+
         db.RegistrarRecoleccion(recoleccion);
     }
 

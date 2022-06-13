@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 
 import java.util.List;
+//Diego Sandoval 20619.149-K
 public class ArrayListviewPlanta extends ArrayAdapter <ClasePlanta> {
     View ListaPlanta;
 

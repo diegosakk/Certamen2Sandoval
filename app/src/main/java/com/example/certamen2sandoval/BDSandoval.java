@@ -7,7 +7,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
-
+import java.util.Arrays;
+//Diego Sandoval 20619.149-K
 public class BDSandoval extends SQLiteOpenHelper {
     public String Tablas;
     private static final int VERSION_BASEDATOS = 1;
@@ -29,7 +30,7 @@ public class BDSandoval extends SQLiteOpenHelper {
                 "(id INTEGER PRIMARY KEY AUTOINCREMENT, CodigoPlanta TEXT, NombrePlanta TEXT, NombreCientifico TEXT, ImagenPlanta BLOB, Uso TEXT )");
 
         db.execSQL("CREATE TABLE RECOLECCIONSANDOVAL" +
-                "(id INTEGER PRIMARY KEY AUTOINCREMENT, fecha TEXT, CodigoPlanta TEXT, RUTCientifico TEXT, comentario TEXT, imagenLugar BLOB,latitud REAL,longitud REAL )");
+                "(id INTEGER PRIMARY KEY AUTOINCREMENT, fecha TEXT, CodigoPlanta TEXT, RUTCientifico TEXT, comentario TEXT, imagenLugar BLOB,latitud TEXT,longitud TEXT )");
     }
 
 
@@ -145,14 +146,15 @@ public class BDSandoval extends SQLiteOpenHelper {
         if (db != null) {
             ContentValues valores = new ContentValues();
             valores.put("fecha", recoleccion.getFecha());
-            valores.put("CodigoPlanta", recoleccion.getCodigoPlanta()+"");
+            valores.put("CodigoPlanta", recoleccion.getCodigoPlanta());
             valores.put("RUTCientifico", recoleccion.getRUTCientifico());
             valores.put("comentario", recoleccion.getComentario());
             valores.put("imagenLugar", recoleccion.getFotoLugar());
             valores.put("latitud", recoleccion.getLatitud());
             valores.put("longitud", recoleccion.getLongitud());
+
             try {
-                db.insert("PLANTASANDOVAL", "", valores);
+                db.insert("RECOLECCIONSANDOVAL", "", valores);
                 db.close();
             } catch (Exception e) {
                 db.close();
@@ -172,7 +174,8 @@ public class BDSandoval extends SQLiteOpenHelper {
 
             if (c.moveToFirst()) {
                 do {
-                    recoleccion = new ClaseRecoleccion(c.getString(0), c.getInt(1), c.getInt(2), c.getString(3), c.getBlob(4), c.getInt(5),c.getInt(6));
+                    System.out.println(Arrays.toString(c.getBlob(5)));
+                    recoleccion = new ClaseRecoleccion(c.getString(1), c.getInt(2), c.getInt(3), c.getString(4), c.getBlob(5), c.getInt(6),c.getInt(7));
                     recolecciones.add(recoleccion);
                 }
                 while (c.moveToNext());
@@ -187,8 +190,10 @@ public class BDSandoval extends SQLiteOpenHelper {
                 return null;
             }
         } catch (Exception e) {
+            e.printStackTrace();
             return null;
         }
     }
+
 }
 

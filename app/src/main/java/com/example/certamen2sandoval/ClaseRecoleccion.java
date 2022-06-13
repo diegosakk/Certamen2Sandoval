@@ -1,5 +1,5 @@
 package com.example.certamen2sandoval;
-
+//Diego Sandoval 20619.149-K
 public class ClaseRecoleccion {
     public String getFecha() {
         return fecha;

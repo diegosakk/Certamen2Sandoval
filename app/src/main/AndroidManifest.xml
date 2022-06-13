@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Certamen2Sandoval">
         <activity
+            android:name=".ListarRecoleccionPorCientifico"
+            android:exported="false" />
+        <activity
+            android:name=".creditosfragmentholder"
+            android:exported="false" />
+        <activity
             android:name=".ListarRecoleccion"
             android:exported="false" />
         <activity

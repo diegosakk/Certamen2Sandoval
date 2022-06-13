@@ -1,5 +1,5 @@
 package com.example.certamen2sandoval;
-
+//Diego Sandoval 20619.149-K
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;

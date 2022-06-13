@@ -1,5 +1,5 @@
 package com.example.certamen2sandoval;
-
+//Diego Sandoval 20619.149-K
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -58,6 +58,11 @@ public class MainActivity extends AppCompatActivity {
     }
     public void ActivityRecoleccion (View view){
         Intent intent = new Intent(MainActivity.this, MenuRecoleccion.class);
+        startActivity(intent);
+    }
+
+    public void ActivityCreditos (View view){
+        Intent intent = new Intent(MainActivity.this, creditosfragmentholder.class);
         startActivity(intent);
     }
 

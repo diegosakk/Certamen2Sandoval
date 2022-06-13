@@ -1,5 +1,5 @@
 package com.example.certamen2sandoval;
-
+//Diego Sandoval 20619.149-K
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -19,6 +19,8 @@ public class ListarCientificos extends AppCompatActivity {
         setContentView(R.layout.activity_listar_cientificos);
         lvListarCientifico = findViewById(R.id.listCientificos);
         ListarCientifico();
+
+
     }
 
     BDSandoval objBD;

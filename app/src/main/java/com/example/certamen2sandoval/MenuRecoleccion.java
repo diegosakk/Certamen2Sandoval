@@ -1,5 +1,5 @@
 package com.example.certamen2sandoval;
-
+//Diego Sandoval 20619.149-K
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -21,4 +21,9 @@ public class MenuRecoleccion extends AppCompatActivity {
         Intent intent = new Intent(MenuRecoleccion.this, ListarRecoleccion.class);
         startActivity(intent);
     }
+    public void ActivityListarRecoleccionEspecifico(View view){
+        Intent intent = new Intent(MenuRecoleccion.this, ListarRecoleccionPorCientifico.class);
+        startActivity(intent);
+    }
+
 }

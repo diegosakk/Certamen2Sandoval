@@ -1,7 +1,7 @@
 package com.example.certamen2sandoval;
 
 import java.sql.Blob;
-
+//Diego Sandoval 20619.149-K
 public class ClasePlanta {
     private int IdPlanta;
 
