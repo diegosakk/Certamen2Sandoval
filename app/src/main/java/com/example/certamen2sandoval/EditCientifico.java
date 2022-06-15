@@ -42,7 +42,7 @@ public class EditCientifico extends AppCompatActivity {
         }
     }
 
-    public void Editar(View v) {
+    public void EditarCientifico(View v) {
         String rut = txtRutCientifico.getText().toString();
         String nombre = txtNombre.getText().toString();
         String apellido = txtApellido.getText().toString();
@@ -61,24 +61,24 @@ public class EditCientifico extends AppCompatActivity {
         if(apellido.equals(""))
             error+="Debe selecionar genero\n";
         if(!error.equals(""))
-            lanzarToast(error);
+            Mensaje(error);
         else
         {
             ClaseCientifico cientifico = new ClaseCientifico(this.cientifico.getIdCientifico(),Integer.parseInt(rut),nombre,apellido,genero);
 
             this.bd.editCientifico(cientifico);
-            lanzarToast("Editado el cientifico con RUT: " + this.cientifico.getRUTCientifico());
+            Mensaje("Editado el cientifico con RUT " + this.cientifico.getRUTCientifico());
             finish();
 
         }
 
 
     }
-    public void lanzarToast(String mensaje){
+    public void Mensaje(String mensaje){
         Toast.makeText(this,mensaje, Toast.LENGTH_LONG).show();
     }
 
-    public void Borrar(){
+    public void BorrarCientifico(){
         String nombre = this.cientifico.getNombreCientifico();
 
         try {
@@ -86,17 +86,17 @@ public class EditCientifico extends AppCompatActivity {
             if(!check)
             {
                 this.bd.EliminarCientifico(nombre);
-                lanzarToast("cientifico borrado rut: " + this.cientifico.getNombreCientifico());
+                Mensaje("Cientifico eliminado con el RUT " + this.cientifico.getNombreCientifico());
                 finish();
             }
             else{
-                lanzarToast("cientifico tiene asociado recolecciones");
+                Mensaje("Cientifico esta asociado a una recoleccion");
                 finish();
             }
 
         }catch (Exception e)
         {
-            lanzarToast("error en borrado");
+            Mensaje("No se pudo borrar");
         }
     }
 }

@@ -12,6 +12,7 @@ import java.util.Arrays;
 public class BDSandoval extends SQLiteOpenHelper {
     public String Tablas;
     private static final int VERSION_BASEDATOS = 1;
+    BDSandoval bd;
 
 
 
@@ -240,6 +241,69 @@ public class BDSandoval extends SQLiteOpenHelper {
         ClaseCientifico cientifico;
         try {
             Cursor c = db.rawQuery("SELECT * FROM RecolecciónSandoval WHERE nombreCientifico = '"+nombre+"'", null);
+
+            if (c.moveToFirst()) {
+                this.close();
+                c.close();
+                return true;
+            } else {
+                this.close();
+                c.close();
+
+                return false;
+            }
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    public boolean editPlanta(ClasePlanta planta){
+        boolean update = true;
+        SQLiteDatabase bd = getWritableDatabase();
+        if (bd != null) {
+            ContentValues valores = new ContentValues();
+            valores.put("codigoPlanta", planta.getCodigoPlanta());
+            valores.put("nombrePlanta", planta.getNombrePlanta());
+            valores.put("nombreCientifico", planta.getNombreCientifico());
+            valores.put("ImagenPlanta", planta.getImagenPlanta());
+            valores.put("uso",  planta.getUso());
+            try {
+                bd.update("PlantaSandoval",valores,"id = "+planta.getIdPlanta(),null);
+                bd.close();
+            } catch (Exception e) {
+                bd.close();
+                update = false;
+            }
+        } else {
+            onCreate(bd);
+        }
+        return update;
+    }
+
+    public boolean EliminarPlanta(int id){
+        boolean delete = true;
+        SQLiteDatabase db = getWritableDatabase();
+        if (db != null){
+            String query = "DELETE FROM PlantaSandoval WHERE id = " + id + "";
+            try {
+                db.execSQL(query);
+                db.close();
+            } catch (Exception e) {
+                db.close();
+                delete = false;
+            }
+        }
+        else {
+            onCreate(db);
+        }
+        return delete;
+    }
+
+    public boolean checkRecoleccionPlanta(String codigo) {
+        SQLiteDatabase db = getReadableDatabase();
+        ArrayList<ClasePlanta> plantas = new ArrayList<ClasePlanta>();
+        ClasePlanta planta;
+        try {
+            Cursor c = db.rawQuery("SELECT * FROM RecoleccionSandoval WHERE codigoPlanta = '"+codigo+"'", null);
 
             if (c.moveToFirst()) {
                 this.close();

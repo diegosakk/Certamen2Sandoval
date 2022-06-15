@@ -1,8 +1,9 @@
 package com.example.certamen2sandoval;
 
+import java.io.Serializable;
 import java.sql.Blob;
 //Diego Sandoval 20619.149-K
-public class ClasePlanta {
+public class ClasePlanta implements Serializable {
     private int IdPlanta;
 
     public int getIdPlanta() {

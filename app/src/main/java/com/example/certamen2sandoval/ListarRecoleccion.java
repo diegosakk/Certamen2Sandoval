@@ -2,7 +2,10 @@ package com.example.certamen2sandoval;
 //Diego Sandoval 20619.149-K
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -17,6 +20,7 @@ public class ListarRecoleccion extends AppCompatActivity {
         setContentView(R.layout.activity_listar_recoleccion);
         lvListarRecoleccion = findViewById(R.id.listRecoleccion);
         ListarRecoleccion();
+
     }
 
     BDSandoval objBD;
