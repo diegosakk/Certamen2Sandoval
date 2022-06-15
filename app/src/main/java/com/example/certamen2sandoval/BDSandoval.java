@@ -174,7 +174,6 @@ public class BDSandoval extends SQLiteOpenHelper {
 
             if (c.moveToFirst()) {
                 do {
-                    System.out.println(Arrays.toString(c.getBlob(5)));
                     recoleccion = new ClaseRecoleccion(c.getString(1), c.getInt(2), c.getInt(3), c.getString(4), c.getBlob(5), c.getInt(6),c.getInt(7));
                     recolecciones.add(recoleccion);
                 }
@@ -192,6 +191,68 @@ public class BDSandoval extends SQLiteOpenHelper {
         } catch (Exception e) {
             e.printStackTrace();
             return null;
+        }
+    }
+    public boolean editCientifico(ClaseCientifico cientifico){
+        boolean update = true;
+        SQLiteDatabase db = getWritableDatabase();
+        if (db != null) {
+
+            String query = "UPDATE CientificoSandoval " +
+                    "SET rut = '" + cientifico.getRUTCientifico() + "', nombre = '" + cientifico.getNombreCientifico() + "'," + "apellido = '" + cientifico.getApellidosCientifico() + "',  genero = '" + cientifico.getGeneroCientifico() + "' " + "WHERE id = " +  cientifico.getIdCientifico() + "";
+            try {
+                db.execSQL(query);
+                db.close();
+
+            } catch (Exception e) {
+                db.close();
+                update = false;
+
+            }
+        } else {
+            onCreate(db);
+        }
+        return update;
+    }
+
+    public boolean EliminarCientifico(String nombre){
+        boolean delete = true;
+        SQLiteDatabase db = getWritableDatabase();
+        if (db != null){
+            String query = "DELETE FROM CientificoSandoval WHERE nombre = '" + nombre + "'";
+            try {
+                db.execSQL(query);
+                db.close();
+            } catch (Exception e) {
+                db.close();
+                delete = false;
+            }
+        }
+        else {
+            onCreate(db);
+        }
+        return delete;
+    }
+
+    public boolean checkRecoleccionCientifico(String nombre) {
+        SQLiteDatabase db = getReadableDatabase();
+        ArrayList<ClaseCientifico> cientificos = new ArrayList<ClaseCientifico>();
+        ClaseCientifico cientifico;
+        try {
+            Cursor c = db.rawQuery("SELECT * FROM RecolecciónSandoval WHERE nombreCientifico = '"+nombre+"'", null);
+
+            if (c.moveToFirst()) {
+                this.close();
+                c.close();
+                return true;
+            } else {
+                this.close();
+                c.close();
+
+                return false;
+            }
+        } catch (Exception e) {
+            return false;
         }
     }
 

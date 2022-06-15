@@ -20,7 +20,7 @@ public class RegistrarCientificos extends AppCompatActivity {
         setContentView(R.layout.activity_registrar_cientificos);
         txtRUT = findViewById(R.id.txtRUT);
         txtNombre = findViewById(R.id.txtNombre);
-        txtApellidos = findViewById(R.id.txtApellidos);
+        txtApellidos = findViewById(R.id.txtApellidosEdit);
         rdMasculino =findViewById(R.id.rdMasculino);
         rdFemenino =findViewById(R.id.rdFemenino);
     }

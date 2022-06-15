@@ -1,6 +1,9 @@
 package com.example.certamen2sandoval;
+
+import java.io.Serializable;
+
 //Diego Sandoval 20619.149-K
-public class ClaseCientifico {
+public class ClaseCientifico implements Serializable {
     public int getIdCientifico() {
         return IdCientifico;
     }
