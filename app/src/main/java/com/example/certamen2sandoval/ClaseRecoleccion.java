@@ -41,23 +41,23 @@ public class ClaseRecoleccion {
         FotoLugar = fotoLugar;
     }
 
-    public int getLatitud() {
+    public double getLatitud() {
         return Latitud;
     }
 
-    public void setLatitud(int latitud) {
+    public void setLatitud(double latitud) {
         Latitud = latitud;
     }
 
-    public int getLongitud() {
+    public double getLongitud() {
         return Longitud;
     }
 
-    public void setLongitud(int longitud) {
+    public void setLongitud(double longitud) {
         Longitud = longitud;
     }
 
-    public ClaseRecoleccion(String fecha, int codigoPlanta, int RUTCientifico, String comentario, byte[] fotoLugar, int latitud, int longitud) {
+    public ClaseRecoleccion(String fecha, int codigoPlanta, int RUTCientifico, String comentario, byte[] fotoLugar, double latitud, double longitud) {
         this.fecha = fecha;
         CodigoPlanta = codigoPlanta;
         this.RUTCientifico = RUTCientifico;
@@ -75,6 +75,6 @@ public class ClaseRecoleccion {
     private int RUTCientifico;
     private String Comentario;
     private byte[] FotoLugar;
-    private int Latitud;
-    private int Longitud;
+    private double Latitud;
+    private double Longitud;
 }

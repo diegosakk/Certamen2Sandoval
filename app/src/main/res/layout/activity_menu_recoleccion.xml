@@ -27,14 +27,4 @@
         app:layout_constraintStart_toStartOf="@+id/btnRegistrar"
         app:layout_constraintTop_toBottomOf="@+id/btnRegistrar" />
 
-    <Button
-        android:id="@+id/btnListar2"
-        android:layout_width="142dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="60dp"
-        android:onClick="ActivityListarRecoleccionEspecifico"
-        android:text="Listar Recoleccion Por Cientifico"
-        app:layout_constraintStart_toStartOf="@+id/btnListar"
-        app:layout_constraintTop_toBottomOf="@+id/btnListar" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

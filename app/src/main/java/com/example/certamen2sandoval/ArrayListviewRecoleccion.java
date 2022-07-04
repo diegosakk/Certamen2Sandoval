@@ -30,13 +30,18 @@ public class ArrayListviewRecoleccion extends ArrayAdapter<ClaseRecoleccion> {
         TextView CodigoPlanta = (TextView) ListaRecoleccion.findViewById(R.id.lblCodigoPlanta);
         TextView RUTCientifico = (TextView) ListaRecoleccion.findViewById(R.id.lblRUTCientifico);
         TextView Comentario = (TextView) ListaRecoleccion.findViewById(R.id.lblComentario);
+        TextView Latitud = (TextView) ListaRecoleccion.findViewById(R.id.lblLatitud);
+        TextView Longitud = (TextView) ListaRecoleccion.findViewById(R.id.lblLongitud);
         ImageView imagenRecoleccion = (ImageView) ListaRecoleccion.findViewById(R.id.imagenRecoleccion);
 
         ClaseRecoleccion recoleccion = getItem(position);
         fecha.setText(recoleccion.getFecha() + "");
         CodigoPlanta.setText(recoleccion.getCodigoPlanta() + "");
         RUTCientifico.setText(recoleccion.getRUTCientifico()+"");
+        Latitud.setText(recoleccion.getLatitud()+"");
+        Longitud.setText(recoleccion.getLongitud()+"");
         Comentario.setText(recoleccion.getComentario());
+
         Bitmap image = BitmapFactory.decodeByteArray(recoleccion.getFotoLugar(), 0, recoleccion.getFotoLugar().length);
         imagenRecoleccion.setImageBitmap(image);
         return ListaRecoleccion;

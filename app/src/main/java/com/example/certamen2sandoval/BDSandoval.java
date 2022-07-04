@@ -31,7 +31,7 @@ public class BDSandoval extends SQLiteOpenHelper {
                 "(id INTEGER PRIMARY KEY AUTOINCREMENT, CodigoPlanta TEXT, NombrePlanta TEXT, NombreCientifico TEXT, ImagenPlanta BLOB, Uso TEXT )");
 
         db.execSQL("CREATE TABLE RECOLECCIONSANDOVAL" +
-                "(id INTEGER PRIMARY KEY AUTOINCREMENT, fecha TEXT, CodigoPlanta TEXT, RUTCientifico TEXT, comentario TEXT, imagenLugar BLOB,latitud TEXT,longitud TEXT )");
+                "(id INTEGER PRIMARY KEY AUTOINCREMENT, fecha TEXT, CodigoPlanta TEXT, RUTCientifico TEXT, comentario TEXT, imagenLugar BLOB,latitud DOUBLE,longitud DOUBLE )");
     }
 
 
@@ -175,7 +175,7 @@ public class BDSandoval extends SQLiteOpenHelper {
 
             if (c.moveToFirst()) {
                 do {
-                    recoleccion = new ClaseRecoleccion(c.getString(1), c.getInt(2), c.getInt(3), c.getString(4), c.getBlob(5), c.getInt(6),c.getInt(7));
+                    recoleccion = new ClaseRecoleccion(c.getString(1), c.getInt(2), c.getInt(3), c.getString(4), c.getBlob(5), c.getDouble(6),c.getDouble(7));
                     recolecciones.add(recoleccion);
                 }
                 while (c.moveToNext());
