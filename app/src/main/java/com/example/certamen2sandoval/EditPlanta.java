@@ -83,14 +83,14 @@ public class EditPlanta extends AppCompatActivity {
         bmp1.compress(Bitmap.CompressFormat.PNG, 100, stream);
         byteArray = stream.toByteArray();
 
-        ClasePlanta planta = new ClasePlanta(this.planta.getIdPlanta(),Integer.parseInt(codigo),nombre,nombrecientifico,byteArray,uso);
+        ClasePlanta planta = new ClasePlanta(this.planta.getIdPlanta(),codigo,nombre,nombrecientifico,byteArray,uso);
         this.bd.editPlanta(planta);
         finish();
 
     }
 
     public void BorrarPlanta(View view){
-        int codigo = this.planta.getCodigoPlanta();
+        String codigo = this.planta.getCodigoPlanta();
         int id = this.planta.getIdPlanta();
         try {
             boolean check=this.bd.checkRecoleccionPlanta(codigo+"");

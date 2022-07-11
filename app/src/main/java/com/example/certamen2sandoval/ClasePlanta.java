@@ -14,11 +14,11 @@ public class ClasePlanta implements Serializable {
         IdPlanta = idPlanta;
     }
 
-    public int getCodigoPlanta() {
+    public String getCodigoPlanta() {
         return CodigoPlanta;
     }
 
-    public void setCodigoPlanta(int codigoPlanta) {
+    public void setCodigoPlanta(String codigoPlanta) {
         CodigoPlanta = codigoPlanta;
     }
 
@@ -54,13 +54,13 @@ public class ClasePlanta implements Serializable {
         Uso = uso;
     }
 
-    private int CodigoPlanta;
+    private String CodigoPlanta;
     private String NombrePlanta;
     private String NombreCientifico;
     private byte[] ImagenPlanta;
     private String Uso;
 
-    public ClasePlanta(int idPlanta, int codigoPlanta, String nombrePlanta, String nombreCientifico, byte[] imagenPlanta, String uso) {
+    public ClasePlanta(int idPlanta, String codigoPlanta, String nombrePlanta, String nombreCientifico, byte[] imagenPlanta, String uso) {
         IdPlanta = idPlanta;
         CodigoPlanta = codigoPlanta;
         NombrePlanta = nombrePlanta;

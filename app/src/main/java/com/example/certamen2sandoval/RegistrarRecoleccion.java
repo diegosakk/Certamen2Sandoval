@@ -41,11 +41,12 @@ public class RegistrarRecoleccion extends AppCompatActivity {
     EditText txtFecha,txtComentario;
     Bitmap bmp1;
     ImageView img;
-    int codigoPlanta, RUTCientifico, latitud,longitud;
+    int codigoPlanta, latitud,longitud;
     Location location;
     LocationManager locationManager;
     TextView txtLongitud, txtLatitud;
     Button btnGps;
+    String RUTCientifico;
 
     BDSandoval conn;
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -183,13 +184,10 @@ public class RegistrarRecoleccion extends AppCompatActivity {
         byte [] byteArray = stream.toByteArray();
 
         codigoPlanta = Integer.parseInt(spinIDPlanta.getSelectedItem().toString());
-        RUTCientifico = Integer.parseInt(spinCientifico.getSelectedItem().toString());
 
 
 
-        ClaseRecoleccion recoleccion = new ClaseRecoleccion(txtFecha.getText().toString(),codigoPlanta,RUTCientifico,txtComentario.getText().toString(),byteArray,
-                Double.parseDouble(txtLatitud.getText().toString())
-                ,Double.parseDouble(txtLongitud.getText().toString()));
+        ClaseRecoleccion recoleccion = new ClaseRecoleccion(0,txtFecha.getText().toString(),codigoPlanta,RUTCientifico,txtComentario.getText().toString(),byteArray, Double.parseDouble(txtLatitud.getText().toString()),Double.parseDouble(txtLongitud.getText().toString()));
         BDSandoval db = new BDSandoval(this);
 
         db.RegistrarRecoleccion(recoleccion);

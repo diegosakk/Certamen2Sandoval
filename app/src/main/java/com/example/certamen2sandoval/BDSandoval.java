@@ -31,7 +31,7 @@ public class BDSandoval extends SQLiteOpenHelper {
                 "(id INTEGER PRIMARY KEY AUTOINCREMENT, CodigoPlanta TEXT, NombrePlanta TEXT, NombreCientifico TEXT, ImagenPlanta BLOB, Uso TEXT )");
 
         db.execSQL("CREATE TABLE RECOLECCIONSANDOVAL" +
-                "(id INTEGER PRIMARY KEY AUTOINCREMENT, fecha TEXT, CodigoPlanta TEXT, RUTCientifico TEXT, comentario TEXT, imagenLugar BLOB,latitud DOUBLE,longitud DOUBLE )");
+                "(id INTEGER PRIMARY KEY AUTOINCREMENT, fecha TEXT, CodigoPlanta TEXT, RUTCientifico TEXT, comentario TEXT, imagenLugar BLOB,latitud DOUBLE,longitud DOUBLE)");
     }
 
 
@@ -49,7 +49,7 @@ public class BDSandoval extends SQLiteOpenHelper {
 
             if (c.getCount() > 0) {
                 while (c.moveToNext()){
-                    cientifico = new ClaseCientifico(c.getInt(0), c.getInt(1), c.getString(2), c.getString(3), c.getString(4));
+                    cientifico = new ClaseCientifico(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4));
                     cientificos.add(cientifico);
                 }
                 this.close();
@@ -72,7 +72,7 @@ public class BDSandoval extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
         if (db != null) {
             ContentValues valores = new ContentValues();
-            valores.put("rut", cientificos.getRUTCientifico()+"");
+            valores.put("rut", cientificos.getRUTCientifico());
             valores.put("nombre", cientificos.getNombreCientifico());
             valores.put("apellido", cientificos.getApellidosCientifico());
             valores.put("genero", cientificos.getGeneroCientifico());
@@ -122,7 +122,7 @@ public class BDSandoval extends SQLiteOpenHelper {
 
             if (c.moveToFirst()) {
                 do {
-                    planta = new ClasePlanta(c.getInt(0), c.getInt(1), c.getString(2), c.getString(3), c.getBlob(4), c.getString(5));
+                    planta = new ClasePlanta(c.getInt(0), c.getString(1), c.getString(2), c.getString(3), c.getBlob(4), c.getString(5));
                     plantas.add(planta);
                 }
                 while (c.moveToNext());
@@ -175,7 +175,7 @@ public class BDSandoval extends SQLiteOpenHelper {
 
             if (c.moveToFirst()) {
                 do {
-                    recoleccion = new ClaseRecoleccion(c.getString(1), c.getInt(2), c.getInt(3), c.getString(4), c.getBlob(5), c.getDouble(6),c.getDouble(7));
+                    recoleccion = new ClaseRecoleccion(c.getInt(0),c.getString(1), c.getInt(2), c.getString(3), c.getString(4), c.getBlob(5), c.getDouble(6),c.getDouble(7));
                     recolecciones.add(recoleccion);
                 }
                 while (c.moveToNext());

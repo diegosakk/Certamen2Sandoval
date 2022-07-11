@@ -59,7 +59,7 @@ public class RegistrarPlantas extends AppCompatActivity {
         bmp1.compress(Bitmap.CompressFormat.PNG, 100, stream);
         byte [] byteArray = stream.toByteArray();
 
-        ClasePlanta planta = new ClasePlanta(0,Integer.parseInt(txtCodigoPlanta.getText().toString()),txtNombrePlanta.getText().toString(),txtNombreCientifico.getText().toString(),byteArray,txtUso.getText().toString());
+        ClasePlanta planta = new ClasePlanta(0,txtCodigoPlanta.toString(),txtNombrePlanta.getText().toString(),txtNombreCientifico.getText().toString(),byteArray,txtUso.getText().toString());
         BDSandoval db = new BDSandoval(this);
 
         db.RegistrarPlanta(planta);

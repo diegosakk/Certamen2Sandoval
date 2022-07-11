@@ -31,7 +31,7 @@ public class RegistrarCientificos extends AppCompatActivity {
         if (rdFemenino.isChecked() == true){
             genero = "Femenino";
         }
-        ClaseCientifico cientifico = new ClaseCientifico(0,Integer.parseInt(txtRUT.getText().toString()),txtNombre.getText().toString(),txtApellidos.getText().toString(),genero);
+        ClaseCientifico cientifico = new ClaseCientifico(0,txtRUT.getText().toString(),txtNombre.getText().toString(),txtApellidos.getText().toString(),genero);
         BDSandoval db = new BDSandoval(this);
 
         db.RegistrarCientifico(cientifico);

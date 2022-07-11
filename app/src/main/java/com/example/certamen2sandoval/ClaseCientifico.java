@@ -44,17 +44,17 @@ public class ClaseCientifico implements Serializable {
 
     private String GeneroCientifico;
 
-    public int getRUTCientifico() {
+    public String getRUTCientifico() {
         return RUTCientifico;
     }
 
-    public void setRUTCientifico(int RUTCientifico) {
+    public void setRUTCientifico(String RUTCientifico) {
         this.RUTCientifico = RUTCientifico;
     }
 
-    private int RUTCientifico;
+    private String RUTCientifico;
 
-    public ClaseCientifico(int idCientifico,int RUTCientifico, String nombreCientifico, String apellidosCientifico, String generoCientifico) {
+    public ClaseCientifico(int idCientifico,String RUTCientifico, String nombreCientifico, String apellidosCientifico, String generoCientifico) {
         IdCientifico = idCientifico;
         NombreCientifico = nombreCientifico;
         ApellidosCientifico = apellidosCientifico;

@@ -17,11 +17,11 @@ public class ClaseRecoleccion {
         CodigoPlanta = codigoPlanta;
     }
 
-    public int getRUTCientifico() {
+    public String getRUTCientifico() {
         return RUTCientifico;
     }
 
-    public void setRUTCientifico(int RUTCientifico) {
+    public void setRUTCientifico(String RUTCientifico) {
         this.RUTCientifico = RUTCientifico;
     }
 
@@ -57,7 +57,15 @@ public class ClaseRecoleccion {
         Longitud = longitud;
     }
 
-    public ClaseRecoleccion(String fecha, int codigoPlanta, int RUTCientifico, String comentario, byte[] fotoLugar, double latitud, double longitud) {
+    public int getIdRecoleccion() {
+        return IdRecoleccion;
+    }
+
+    public void setIdRecoleccion(int idRecoleccion) {
+        IdRecoleccion = idRecoleccion;
+    }
+
+    public ClaseRecoleccion(int idRecoleccion,String fecha, int codigoPlanta, String RUTCientifico, String comentario, byte[] fotoLugar, double latitud, double longitud) {
         this.fecha = fecha;
         CodigoPlanta = codigoPlanta;
         this.RUTCientifico = RUTCientifico;
@@ -65,14 +73,19 @@ public class ClaseRecoleccion {
         FotoLugar = fotoLugar;
         Latitud = latitud;
         Longitud = longitud;
+        this.IdRecoleccion = idRecoleccion;
     }
 
     public ClaseRecoleccion() {
     }
 
+
+
+    private int IdRecoleccion;
+
     private String fecha;
     private int CodigoPlanta;
-    private int RUTCientifico;
+    private String RUTCientifico;
     private String Comentario;
     private byte[] FotoLugar;
     private double Latitud;

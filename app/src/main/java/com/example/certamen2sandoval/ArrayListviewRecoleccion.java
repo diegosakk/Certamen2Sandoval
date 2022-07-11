@@ -37,7 +37,7 @@ public class ArrayListviewRecoleccion extends ArrayAdapter<ClaseRecoleccion> {
         ClaseRecoleccion recoleccion = getItem(position);
         fecha.setText(recoleccion.getFecha() + "");
         CodigoPlanta.setText(recoleccion.getCodigoPlanta() + "");
-        RUTCientifico.setText(recoleccion.getRUTCientifico()+"");
+        RUTCientifico.setText(recoleccion.getRUTCientifico());
         Latitud.setText(recoleccion.getLatitud()+"");
         Longitud.setText(recoleccion.getLongitud()+"");
         Comentario.setText(recoleccion.getComentario());

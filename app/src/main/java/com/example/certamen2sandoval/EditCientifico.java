@@ -64,7 +64,7 @@ public class EditCientifico extends AppCompatActivity {
             Mensaje(error);
         else
         {
-            ClaseCientifico cientifico = new ClaseCientifico(this.cientifico.getIdCientifico(),Integer.parseInt(rut),nombre,apellido,genero);
+            ClaseCientifico cientifico = new ClaseCientifico(this.cientifico.getIdCientifico(),rut,nombre,apellido,genero);
 
             this.bd.editCientifico(cientifico);
             Mensaje("Editado el cientifico con RUT " + this.cientifico.getRUTCientifico());
