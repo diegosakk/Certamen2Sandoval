@@ -184,6 +184,7 @@ public class RegistrarRecoleccion extends AppCompatActivity {
         byte [] byteArray = stream.toByteArray();
 
         codigoPlanta = Integer.parseInt(spinIDPlanta.getSelectedItem().toString());
+        RUTCientifico = spinCientifico.getSelectedItem().toString();
 
 
 
